@@ -1,0 +1,270 @@
+
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Roboto|Great+Vibes|Tangerine);
+*, *:after, *:before{
+    box-sizing:border-box;
+}
+body{
+	text-align:center;
+}
+.panda{
+    position: relative;
+    width: 200px;
+    margin: 50px auto;
+
+}
+
+.face{
+    width: 220px;
+    height: 200px;
+    background: #fff;
+    border-radius:100%;
+    margin: 50px auto;
+    box-shadow:0 10px 15px rgba(0,0,0,.15);
+    z-index: 50;
+    position: relative;
+
+}
+.ear1{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #000;
+    z-index: 5;
+    border:10px solid #fff;
+    left: -15px;
+    top: -15px;
+    border-radius:100%;
+
+}
+.ear2{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #000;
+    z-index: 5;
+    border:10px solid #fff;
+    top: -15px;
+    border-radius:100%;
+    left: 151px;
+}
+.eye-shade1{
+    background: #000;
+    width: 50px;
+    height: 80px;
+    margin: 10px;
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    transform:rotate(220deg);
+    border-radius:25px / 20px 30px 35px 40px;
+}
+.eye-shade2{
+    background: #000;
+    width: 50px;
+    height: 80px;
+    margin: 10px;
+    position: absolute;
+    top: 35px;
+    border-radius:25px / 20px 30px 35px 40px;
+    transform: rotate(140deg);
+    left: 126px;
+}
+
+.eye-white1{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius:100%;
+    background: #fff;
+    z-index: 500;
+    left: 40px;
+    top: 80px;
+    overflow: hidden;
+}
+.eye-white2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius:100%;
+    background: #fff;
+    z-index: 500;
+    right: 38px;
+    left: auto;
+    top: 80px;
+    overflow: hidden;
+}
+.eye-ball1{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 20px;
+    top: 20px;
+    max-width: 10px;
+    max-height: 10px;
+    transition:.1s;
+
+}
+.eye-ball1::after{
+    content: '';
+    background: #000;
+    position: absolute;
+    border-radius:100%;
+    right: 0;
+    bottom: 0px;
+    width: 20px;
+    height: 20px;
+}
+.eye-ball2{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 20px;
+    top: 20px;
+    max-width: 10px;
+    max-height: 10px;
+    transition:.1s;
+
+}
+.eye-ball2::after{
+    content: '';
+    background: #000;
+    position: absolute;
+    border-radius:100%;
+    right: 0;
+    bottom: 0px;
+    width: 20px;
+    height: 20px;
+}
+.nose{
+    position: absolute;
+    height: 20px;
+    width: 35px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius:50px  20px/ 30px 15px;
+    transform: rotate(15deg);
+    background: #000;
+}
+.pbody{
+    background: #fff;
+    position: absolute;
+    top: 200px;
+    left: -25px;
+    border-radius:100px 100px 100px 100px / 126px 126px 96px 96px;
+    width: 250px; 
+    height:330px;
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+}
+.hand1{
+    width: 60px;
+    height: 45px;
+    border-radius:50px;
+    box-shadow:0 2px 3px rgba(0,0,0,.15);
+    background: #000;
+    margin: 5px;
+    position: absolute;
+    top: 70px;
+    left: -36px;
+}
+.hand2{
+    width: 60px;
+    height: 45px;
+    border-radius:50px;
+    box-shadow:0 2px 3px rgba(0,0,0,.15);
+    background: #000;
+    margin: 5px;
+    position: absolute;
+    top: 70px;
+    left:365px;
+
+}
+.foot1{
+    top: 430px;
+    left: -80px;
+    position: absolute;
+    background: #000;
+    z-index: 1400;
+    box-shadow:0 5px 5px rgba(0,0,0,.2);
+    border-radius:40px 40px 39px 40px / 26px 26px 63px 63px;
+    width: 75px; 
+    height: 100px;
+}
+
+.foot2{
+    top: 430px;
+    left: 205px;
+    position: absolute;
+    background: #000;
+    z-index: 1400;
+    box-shadow:0 5px 5px rgba(0,0,0,.2);
+    border-radius:40px 40px 39px 40px / 26px 26px 63px 63px;
+    width: 75px; 
+    height: 100px;            
+}
+.myform{
+    display: none;
+    max-width: 400px;
+    padding: 20px 40px;
+    background-image: linear-gradient( 109.6deg,  rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1% );
+    height:340px;
+    margin: auto;
+    display: block;
+    box-shadow:0 10px 15px rgba(0,0,0,.15);
+    transition:.3s;
+    position: relative;
+    transform: translateY(-100px);
+    z-index: 500;
+    border:1px solid #eee;
+    transform:translateY(-100px);
+    border-radius:20px;
+    border:none;
+}
+.myform h1{
+    color:navy;
+    font-family: 'Dancing Script', cursive;
+    font-weight:900;
+    letter-spacing:2px;
+    font-size:40px;
+    margin-bottom:-10px;
+}
+.myform input::placeholder{
+    font-size:14px;
+}
+.myform i{
+    font-size:28px;
+}
+.mylabel{
+    margin-left:-230px;
+}
+.mylabel1{
+    margin-left:-200px;
+}
+.mylabel2{
+    margin-left:-230px;
+}
+.myformbtn{
+    background:navy;
+    border-radius:3px;
+    width: 150px;
+    height: 35px;
+    border:1px solid black;
+    cursor: pointer;
+    transition:.3s;
+    box-shadow:0 50px white inset;
+    color:black;
+    font-weight: bold;
+    letter-spacing:1.5px;
+}
+.myformbtn:hover{
+    box-shadow:0 0 white inset;
+    color: white;
+}
+.myformbtn:focus{
+    outline: none;
+}
+
+
